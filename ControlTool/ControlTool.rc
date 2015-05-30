@@ -1,0 +1,291 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\ControlTool.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ControlTool.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 171, 87
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Scan Parameters"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,12,21,20
+    DEFPUSHBUTTON   "OK",IDOK,128,66,36,14,WS_GROUP
+END
+
+IDD_CONTROLTOOL_DIALOG DIALOGEX 0, 0, 822, 196
+STYLE DS_SETFONT | DS_SETFOREGROUND | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_APPWINDOW
+CAPTION "ControlTool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         " DLN2  (MM3000)",DLN2,"Button",BS_AUTORADIOBUTTON,140,31,72,10
+    CONTROL         "  DLN1  (Mercury)",DLN1,"Button",BS_AUTORADIOBUTTON,223,30,72,11
+    EDITTEXT        PositionBox,194,76,46,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "New Position:",IDC_STATIC,196,64,45,8
+    PUSHBUTTON      "Absolute",MoveType,137,76,51,13
+    GROUPBOX        "Delay Line Control",IDC_STATIC,125,8,187,150
+    EDITTEXT        Infobox,538,11,179,174,ES_CENTER | ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Start Connections",StartConnection,35,130,66,14
+    LTEXT           "DLN2 (MM3000)",IDC_STATIC,26,37,57,8
+    LTEXT           "DLN1 (Mercury)",IDC_STATIC,26,58,55,8
+    LTEXT           "Phase Modulator",IDC_STATIC,27,98,57,8
+    EDITTEXT        ComMM3000,91,35,22,14,ES_AUTOHSCROLL
+    EDITTEXT        ComMercury,91,56,22,14,ES_AUTOHSCROLL
+    EDITTEXT        ComPhase,91,97,22,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Run Scan",RunScan,329,131,76,16,WS_DISABLED
+    LTEXT           "Lock-In",IDC_STATIC,27,79,27,8
+    EDITTEXT        LockinPort,91,76,22,14,ES_AUTOHSCROLL
+    CONTROL         "",TheProgressBar,"msctls_progress32",WS_BORDER,10,166,400,19,WS_EX_STATICEDGE
+    GROUPBOX        "DLN2 Current Position",IDC_STATIC,130,114,89,32,BS_CENTER
+    GROUPBOX        "DLN1 Current Position",IDC_STATIC,223,113,83,33,BS_CENTER
+    CTEXT           "Not Set",MMPos,148,128,53,10
+    CTEXT           "Not Set",MercPos,237,128,53,10
+    GROUPBOX        "Port Connections",IDC_STATIC,6,7,116,150
+    PUSHBUTTON      "Move",MoveDLN,249,73,55,18
+    COMBOBOX        ScanList,319,36,89,65,CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Scan",IDC_STATIC,315,8,97,149
+    CTEXT           "Type Selection:",IDC_STATIC,326,22,73,11
+    LTEXT           "Move Type:",IDC_STATIC,138,65,45,8
+    CTEXT           "No Scan Selected",ScanLegend,435,22,81,10
+    GROUPBOX        "Parameters",IDC_STATIC,415,8,122,178
+    LTEXT           "---",SP0,468,39,52,9
+    LTEXT           "---",SP1,468,57,52,9
+    LTEXT           "---",SP2,468,76,50,9
+    LTEXT           "---",SP3,468,94,62,9
+    EDITTEXT        PAR0,420,38,47,12,ES_AUTOHSCROLL
+    EDITTEXT        PAR1,420,56,47,12,ES_AUTOHSCROLL
+    EDITTEXT        PAR2,420,75,46,12,ES_AUTOHSCROLL
+    EDITTEXT        PAR3,420,93,45,12,ES_AUTOHSCROLL
+    EDITTEXT        PAR4,420,111,45,12,ES_AUTOHSCROLL
+    EDITTEXT        PAR5,420,129,45,12,ES_AUTOHSCROLL
+    EDITTEXT        PAR6,420,148,45,12,ES_AUTOHSCROLL
+    EDITTEXT        PAR7,420,166,46,12,ES_AUTOHSCROLL
+    LTEXT           "Averaging Time (s)",IDC_STATIC,723,54,68,10
+    LTEXT           "Delay Factor",IDC_STATIC,733,76,44,13
+    LTEXT           "Sampling Factor",IDC_STATIC,728,98,54,11
+    EDITTEXT        DLFactor,791,75,22,12,ES_AUTOHSCROLL
+    EDITTEXT        SLFactor,791,96,23,13,ES_AUTOHSCROLL
+    EDITTEXT        TConstant,791,30,23,14,ES_AUTOHSCROLL
+    LTEXT           "Time Constant (key)",IDC_STATIC,720,32,69,11
+    EDITTEXT        AverageTime,791,52,22,14,ES_AUTOHSCROLL
+    GROUPBOX        "Lock-In Settings",IDC_STATIC,716,8,106,176
+    LTEXT           "---",SP4,468,112,61,9
+    LTEXT           "---",SP5,468,130,61,9
+    LTEXT           "---",SP6,468,149,50,9
+    LTEXT           "---",SP7,468,167,50,9
+    PUSHBUTTON      "...",InfoBoxButton,790,117,20,12
+    CONTROL         "    Read AUX",AuxCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,335,115,54,11
+    PUSHBUTTON      "Read Lock-In",ReadLockin,734,139,70,18
+    GROUPBOX        "",IDC_STATIC,716,132,105,52
+    PUSHBUTTON      "Clear Text",ClearText,734,163,70,18
+END
+
+IDD_INFOBOX DIALOGEX 0, 0, 87, 242
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info Box"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "0 - 10 microsec",IDC_STATIC,19,29,49,9
+    LTEXT           "1 - 30 microsec",IDC_STATIC,19,39,49,9
+    LTEXT           "2 - 100 microsec",IDC_STATIC,19,49,55,9
+    LTEXT           "3 - 300 microsec",IDC_STATIC,19,59,55,9
+    LTEXT           "4 - 1 ms",IDC_STATIC,19,69,49,9
+    LTEXT           "5 - 3 ms",IDC_STATIC,19,79,49,9
+    LTEXT           "6 - 10 ms",IDC_STATIC,19,89,55,9
+    LTEXT           "7 - 30 ms",IDC_STATIC,19,99,55,9
+    LTEXT           "8 - 100 ms",IDC_STATIC,19,109,49,9
+    LTEXT           "9 - 300 ms",IDC_STATIC,19,119,49,9
+    LTEXT           "10 - 1 s",IDC_STATIC,15,128,55,9
+    LTEXT           "11 - 3 s",IDC_STATIC,15,139,55,9
+    LTEXT           "12 - 10 s",IDC_STATIC,15,149,49,9
+    LTEXT           "13 - 30 s",IDC_STATIC,15,159,49,9
+    LTEXT           "14 - 100 s",IDC_STATIC,15,168,55,9
+    LTEXT           "15 - 300 s",IDC_STATIC,15,178,55,9
+    LTEXT           "16 - 1 ks",IDC_STATIC,15,188,49,9
+    LTEXT           "17 - 3 ks",IDC_STATIC,15,198,49,9
+    LTEXT           "18 - 10 ks",IDC_STATIC,15,208,55,9
+    LTEXT           "19 - 30 ks",IDC_STATIC,15,218,55,9
+    CTEXT           "TC Conversion Key",IDC_STATIC,10,8,66,14,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ControlTool.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "ControlTool.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_CONTROLTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_INFOBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 80
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About ControlTool..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\ControlTool.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
